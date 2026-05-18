@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAKAS — History & Culture of the Land of Fire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-volcano">
+      <div class="lava-blob b1"></div>
+      <div class="lava-blob b2"></div>
+      <div class="lava-blob b3"></div>
+    </div>
+    <div class="loader-title">
+      <span class="loader-kanji">BAKAS</span>
+      <span class="loader-sub">BICOL: Land of Fire & Heritage</span>
+    </div>
+    <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+  </div>
+</div>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- SCROLL PROGRESS -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="nav-logo-icon">⛰</span>
+    <span>BAKAS</span>
+  </div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#history" class="nav-link">History</a></li>
+    <li><a href="#heritage" class="nav-link">Heritage Sites</a></li>
+    <li><a href="#culture" class="nav-link">Culture</a></li>
+    <li><a href="#blog" class="nav-link">Blog</a></li>
+    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+    <li><a href="#about" class="nav-link">About</a></li>
+    <li><a href="#contact" class="nav-link">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MOBILE SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <button class="sidebar-close" id="sidebarClose">✕</button>
+  <ul class="sidebar-links">
+    <li><a href="#home" class="sidebar-link">Home</a></li>
+    <li><a href="#history" class="sidebar-link">History</a></li>
+    <li><a href="#heritage" class="sidebar-link">Heritage Sites</a></li>
+    <li><a href="#culture" class="sidebar-link">Culture</a></li>
+    <li><a href="#blog" class="sidebar-link">Blog</a></li>
+    <li><a href="#gallery" class="sidebar-link">Gallery</a></li>
+    <li><a href="#about" class="sidebar-link">About</a></li>
+    <li><a href="#contact" class="sidebar-link">Contact</a></li>
+  </ul>
+</div>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ========== HOME / HERO ========== -->
+<section id="home" class="hero">
+  <canvas id="particleCanvas"></canvas>
+  <div class="hero-bg-layers">
+    <div class="hero-layer l1"></div>
+    <div class="hero-layer l2"></div>
+    <div class="hero-layer l3"></div>
+    <div class="volcano-silhouette"></div>
+  </div>
+  <div class="hero-content" id="heroContent">
+    <p class="hero-eyebrow reveal-up">Est. Pre-Colonial Era · Bicol Peninsula, Philippines</p>
+    <h1 class="hero-title reveal-up" data-delay="100">
+      <span class="title-line">History &</span>
+      <span class="title-line accent">Heritage</span>
+      <span class="title-line">of Bicol</span>
+    </h1>
+    <p class="hero-desc reveal-up" data-delay="200">Journey through centuries of faith, fire, and culture — from the shadow of Mayon Volcano to the shores of the Pacific.</p>
+    <div class="hero-cta reveal-up" data-delay="300">
+      <a href="#history" class="btn btn-primary">Explore History</a>
+      <a href="#heritage" class="btn btn-outline">Heritage Sites</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item"><span class="stat-num" data-target="400">0</span><span class="stat-unit">+</span><span class="stat-label">Years of History</span></div>
+    <div class="stat-item"><span class="stat-num" data-target="6">0</span><span class="stat-unit"></span><span class="stat-label">Provinces</span></div>
+    <div class="stat-item"><span class="stat-num" data-target="120">0</span><span class="stat-unit">+</span><span class="stat-label">Heritage Sites</span></div>
+    <div class="stat-item"><span class="stat-num" data-target="15">0</span><span class="stat-unit">+</span><span class="stat-label">Festivals</span></div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-hint-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ========== FEATURED HIGHLIGHTS ========== -->
+<section class="featured-section section-pad">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="section-eyebrow">Discover Bicol</p>
+      <h2 class="section-title">Cultural Highlights</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="featured-grid">
+      <div class="feat-card reveal-up" data-delay="0">
+        <div class="feat-card-inner">
+          <div class="feat-icon">⛪</div>
+          <h3>Colonial Churches</h3>
+          <p>Centuries-old baroque churches standing as testaments to Spanish colonial faith and Bicolano resilience.</p>
+          <a href="#heritage" class="feat-link">Explore →</a>
+        </div>
+      </div>
+      <div class="feat-card reveal-up" data-delay="100">
+        <div class="feat-card-inner">
+          <div class="feat-icon">🌋</div>
+          <h3>Mayon Volcano</h3>
+          <p>The world's most perfect cone and spiritual heart of Bicol — a symbol of beauty, power, and legend.</p>
+          <a href="#heritage" class="feat-link">Explore →</a>
+        </div>
+      </div>
+      <div class="feat-card reveal-up" data-delay="200">
+        <div class="feat-card-inner">
+          <div class="feat-icon">🎭</div>
+          <h3>Ibalong Epic</h3>
+          <p>The ancient Bicolano epic poem narrating the heroic deeds of Baltog, Handyong, and Bantong.</p>
+          <a href="#culture" class="feat-link">Explore →</a>
+        </div>
+      </div>
+      <div class="feat-card reveal-up" data-delay="300">
+        <div class="feat-card-inner">
+          <div class="feat-icon">🌶</div>
+          <h3>Bicolano Cuisine</h3>
+          <p>World-famous for fiery flavors — Bicol Express, laing, and pinangat reflect a culture bold and vibrant.</p>
+          <a href="#culture" class="feat-link">Explore →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== HISTORY TIMELINE ========== -->
+<section id="history" class="history-section section-pad">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="section-eyebrow">Through the Ages</p>
+      <h2 class="section-title">The Story of Bicol</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-era">Pre-Colonial Era</div>
+          <div class="tl-year">Before 1565</div>
+          <h3>The Age of Ibalong</h3>
+          <p>Ancient Bicolanos called their land <em>Ibalong</em> — a thriving civilization of seafarers, farmers, and warriors. The epic poem <em>Ibalong</em> records legendary heroes who tamed wild beasts and established the first communities along the volcanic landscape.</p>
+          <div class="tl-tags"><span>Indigenous</span><span>Pre-Colonial</span><span>Epic Literature</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-era">Spanish Colonization</div>
+          <div class="tl-year">1565 – 1898</div>
+          <h3>The Cross and the Sword</h3>
+          <p>Spanish missionaries arrived under Fray Juan de Plasencia, converting thousands and establishing parishes. Magnificent stone churches rose from volcanic rock — Cagsawa, Daraga, Pío Dumayas — reshaping Bicolano identity while indigenous culture persisted beneath the Catholic veneer.</p>
+          <div class="tl-tags"><span>Spanish Era</span><span>Catholicism</span><span>Colonial</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-era">Philippine Revolution</div>
+          <div class="tl-year">1896 – 1902</div>
+          <h3>Sons of Bicol Rise</h3>
+          <p>Bicolano heroes answered Bonifacio's call. Generals Simeon Ola and Wenceslao Viniegra led resistance movements. The region's revolutionary spirit proved fierce — guerrilla warfare in the mountains prolonged resistance even after the Pact of Biak-na-Bato.</p>
+          <div class="tl-tags"><span>Revolution</span><span>Katipunan</span><span>Heroes</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-era">American Period</div>
+          <div class="tl-year">1902 – 1941</div>
+          <h3>Education & Infrastructure</h3>
+          <p>The Thomasites brought public education to Bicol. Roads, bridges, and schools transformed the region. Naga City emerged as an educational hub. The University of Nueva Caceres — founded in 1593 — became one of Asia's oldest universities.</p>
+          <div class="tl-tags"><span>American Era</span><span>Education</span><span>Development</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item left reveal-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-era">World War II</div>
+          <div class="tl-year">1941 – 1945</div>
+          <h3>Fire and Liberation</h3>
+          <p>Japanese forces occupied Bicol in December 1941. Guerrilla units under Lt. Col. Padua harassed occupiers throughout the region. Liberation came with MacArthur's return — but the war left Bicol scarred, churches damaged, communities shattered.</p>
+          <div class="tl-tags"><span>WWII</span><span>Japanese Occupation</span><span>Liberation</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item right reveal-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-era">Modern Era</div>
+          <div class="tl-year">1945 – Present</div>
+          <h3>The Living Legacy</h3>
+          <p>Bicol today is a region of contrasts — ancient faith and modern technology, volcanic danger and breathtaking beauty. Heritage preservation efforts protect centuries-old churches, while the Penafrancia Festival draws millions in the world's largest fluvial procession.</p>
+          <div class="tl-tags"><span>Modern</span><span>Heritage</span><span>Contemporary</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== HERITAGE SITES ========== -->
+<section id="heritage" class="heritage-section section-pad">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="section-eyebrow">Sacred & Historic</p>
+      <h2 class="section-title">Heritage Sites</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="heritage-grid" id="heritageGrid">
+
+      <div class="heritage-card reveal-up" data-delay="0" data-site="cagsawa">
+        <div class="hcard-img hcard-img-cagsawa">
+           <img
+            src="images/cagsawa.jpg"
+            alt="Cagsawa Ruins"
+            class="heritage-image"
+          />
+          <div class="hcard-overlay"></div>
+          <div class="hcard-badge">Church Ruins</div>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-location">📍 Daraga, Albay</div>
+          <h3>Cagsawa Ruins</h3>
+          <p>Remains of an 18th-century Franciscan church buried by the 1814 eruption of Mayon Volcano. The submerged bell tower stands as Bicol's most iconic image.</p>
+          <button class="btn-site-modal" onclick="openSiteModal('cagsawa')">View Details</button>
+        </div>
+      </div>
+
+      <div class="heritage-card reveal-up" data-delay="100" data-site="daraga">
+        <div class="hcard-img hcard-img-daraga">
+           <img
+            src="images/daraga-facade.jpg"
+            alt="daraga church facade"
+            class="heritage-image"
+          />
+          <div class="hcard-overlay"></div>
+          <div class="hcard-badge">Baroque Church</div>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-location">📍 Daraga, Albay</div>
+          <h3>Daraga Church</h3>
+          <p>Our Lady of the Gate Parish — a stunning Baroque church built from volcanic stone in 1773, overlooking the Cagsawa ruins with Mayon as backdrop.</p>
+          <button class="btn-site-modal" onclick="openSiteModal('daraga')">View Details</button>
+        </div>
+      </div>
+
+      <div class="heritage-card reveal-up" data-delay="200" data-site="penafrancia">
+        <div class="hcard-img hcard-img-penafrancia">
+           <img
+            src="images/basilica.jpg"
+            alt="Basilica of Our Lady of Peñafrancia"
+            class="heritage-image"
+          />
+          <div class="hcard-overlay"></div>
+          <div class="hcard-badge">Shrine</div>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-location">📍 Naga City, Camarines Sur</div>
+          <h3>Basilica of Our Lady of Peñafrancia</h3>
+          <p>Home to the beloved Ina — Our Lady of Peñafrancia. The minor basilica hosts the world's largest fluvial procession annually in September.</p>
+          <button class="btn-site-modal" onclick="openSiteModal('penafrancia')">View Details</button>
+        </div>
+      </div>
+
+      <div class="heritage-card reveal-up" data-delay="0" data-site="mayon">
+        <div class="hcard-img hcard-img-mayon">
+           <img
+            src="images/mayon.jpg"
+              alt="Basilica of Our Lady of Peñafrancia"
+              class="heritage-image"
+          />
+          <div class="hcard-overlay"></div>
+          <div class="hcard-badge">Natural Wonder</div>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-location">📍 Legazpi City, Albay</div>
+          <h3>Mayon Volcano</h3>
+          <p>The world's most perfect volcanic cone — 2,463m above sea level. An active stratovolcano and the defining symbol of Bicolano identity.</p>
+          <button class="btn-site-modal" onclick="openSiteModal('mayon')">View Details</button>
+        </div>
+      </div>
+
+      <div class="heritage-card reveal-up" data-delay="100" data-site="quipayo">
+        <div class="hcard-img hcard-img-quipayo">
+          <img
+            src="images/quipayo.jpg"
+              alt="Quipayo Church"
+              class="heritage-image"
+          />
+          <div class="hcard-overlay"></div>
+          <div class="hcard-badge">Ancient Church</div>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-location">📍 Quipayo, Camarines Sur</div>
+          <h3>Quipayo Church</h3>
+          <p>One of the oldest churches in Bicol, built by Augustinian missionaries in the 16th century. Its simple façade belies centuries of living faith.</p>
+          <button class="btn-site-modal" onclick="openSiteModal('quipayo')">View Details</button>
+        </div>
+      </div>
+
+      <div class="heritage-card reveal-up" data-delay="200" data-site="catanduanes">
+        <div class="hcard-img hcard-img-catanduanes">
+          <img
+            src="images/happyisland.jpg"
+              alt="Happy Island"
+              class="heritage-image"
+          />
+          <div class="hcard-overlay"></div>
+          <div class="hcard-badge">Natural Heritage</div>
+        </div>
+        <div class="hcard-body">
+          <div class="hcard-location">📍 Catanduanes</div>
+          <h3>Catanduanes Island</h3>
+          <p>The "Happy Island" — with pristine surf beaches, ancient caves, and a distinct culture shaped by centuries of island isolation and Pacific storms.</p>
+          <button class="btn-site-modal" onclick="openSiteModal('catanduanes')">View Details</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SITE MODAL -->
+<div class="site-modal" id="siteModal">
+  <div class="site-modal-inner">
+    <button class="modal-close" onclick="closeSiteModal()">✕</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+<div class="modal-backdrop" id="modalBackdrop" onclick="closeSiteModal()"></div>
+
+<!-- ========== CULTURE & TRADITIONS ========== -->
+<section id="culture" class="culture-section section-pad">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="section-eyebrow">Traditions Alive</p>
+      <h2 class="section-title">Culture & Identity</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="culture-tabs">
+      <button class="ctab active" data-tab="festivals">🎉 Festivals</button>
+      <button class="ctab" data-tab="cuisine">🌶 Cuisine</button>
+      <button class="ctab" data-tab="language">📜 Language</button>
+      <button class="ctab" data-tab="clothing">👘 Clothing</button>
+    </div>
+
+    <div class="culture-tab-content" id="cultureContent">
+      <!-- Injected by JS -->
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== BLOG ========== -->
+<section id="blog" class="blog-section section-pad">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="section-eyebrow">Stories & Research</p>
+      <h2 class="section-title">Heritage Blog</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Blog Controls -->
+    <div class="blog-controls reveal-up">
+      <div class="blog-search-wrap">
+        <input type="text" id="blogSearch" placeholder="Search articles..." class="blog-search" />
+        <span class="search-icon">🔍</span>
+      </div>
+      <div class="blog-filter-wrap">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="history">History</button>
+        <button class="filter-btn" data-cat="culture">Culture</button>
+        <button class="filter-btn" data-cat="heritage">Heritage</button>
+        <button class="filter-btn" data-cat="festivals">Festivals</button>
+      </div>
+      <button class="btn btn-primary" id="newPostBtn" onclick="openBlogEditor()">+ New Post</button>
+    </div>
+
+    <div class="blog-grid" id="blogGrid">
+      <!-- Rendered by JS -->
+    </div>
+
+  </div>
+</section>
+
+<!-- BLOG EDITOR MODAL -->
+<div class="blog-modal" id="blogModal">
+  <div class="blog-modal-inner">
+    <div class="blog-modal-header">
+      <h3 id="blogModalTitle">Create New Post</h3>
+      <button class="modal-close" onclick="closeBlogEditor()">✕</button>
+    </div>
+    <div class="blog-modal-body">
+      <input type="hidden" id="editPostId" />
+      <div class="form-group">
+        <label>Title *</label>
+        <input type="text" id="postTitle" placeholder="Enter post title..." />
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Author</label>
+          <input type="text" id="postAuthor" placeholder="Author name..." />
+        </div>
+        <div class="form-group">
+          <label>Category</label>
+          <select id="postCategory">
+            <option value="history">History</option>
+            <option value="culture">Culture</option>
+            <option value="heritage">Heritage</option>
+            <option value="festivals">Festivals</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Tags (comma-separated)</label>
+        <input type="text" id="postTags" placeholder="Bicol, heritage, colonial..." />
+      </div>
+      <div class="form-group">
+        <label>Description *</label>
+        <textarea id="postDesc" placeholder="Write your article content here..." rows="6"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Cover Image URL (optional)</label>
+        <input type="text" id="postImage" placeholder="https://..." />
+      </div>
+      <div class="form-group">
+        <label>Or Upload Image</label>
+        <div class="upload-area" id="uploadArea">
+          <div class="upload-icon">📁</div>
+          <p>Drag & drop or click to upload</p>
+          <input type="file" id="imageUpload" accept="image/*" hidden />
+        </div>
+        <div class="upload-preview" id="uploadPreview"></div>
+      </div>
+    </div>
+    <div class="blog-modal-footer">
+      <button class="btn btn-outline" onclick="closeBlogEditor()">Cancel</button>
+      <button class="btn btn-primary" onclick="savePost()">Publish Post</button>
+    </div>
+  </div>
+</div>
+<div class="modal-backdrop" id="blogBackdrop" onclick="closeBlogEditor()"></div>
+
+<!-- ========== GALLERY ========== -->
+<section id="gallery" class="gallery-section section-pad">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="section-eyebrow">Visual Archive</p>
+      <h2 class="section-title">Media Gallery</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="gallery-filter reveal-up">
+      <button class="gfilter active" data-gcat="all">All</button>
+      <button class="gfilter" data-gcat="churches">Churches</button>
+      <button class="gfilter" data-gcat="nature">Nature</button>
+      <button class="gfilter" data-gcat="festivals">Festivals</button>
+      <button class="gfilter" data-gcat="culture">Culture</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <!-- Rendered by JS -->
+    </div>
+
+    <!-- Upload Area -->
+    <div class="gallery-upload reveal-up">
+      <h4>Contribute to the Archive</h4>
+      <div class="gallery-upload-area" id="galleryUploadArea">
+        <div class="upload-icon">📷</div>
+        <p>Upload historical photos or cultural images</p>
+        <input type="file" id="galleryUpload" accept="image/*,video/*" hidden multiple />
+        <button class="btn btn-outline" onclick="document.getElementById('galleryUpload').click()">Choose Files</button>
+      </div>
+      <div id="galleryUploads" class="gallery-uploaded"></div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">✕</button>
+  <button class="lb-prev" onclick="lbPrev()">‹</button>
+  <button class="lb-next" onclick="lbNext()">›</button>
+  <div class="lb-inner">
+    <img src="" alt="" id="lbImg" />
+    <div class="lb-caption" id="lbCaption"></div>
+  </div>
+</div>
+<div class="modal-backdrop" id="lbBackdrop" onclick="closeLightbox()"></div>
+
+<!-- ========== ABOUT ========== -->
+<section id="about" class="about-section section-pad">
+  <div class="container">
+    <div class="about-layout">
+      <div class="about-text reveal-left">
+        <p class="section-eyebrow">About This Project</p>
+        <h2 class="section-title">Preserving Bicol's Soul</h2>
+        <div class="section-divider" style="margin:0 0 2rem;"></div>
+        <p>The <strong>Bicol Heritage Digital Archive</strong> is a community-driven initiative to preserve and celebrate the rich historical and cultural legacy of the Bicol Peninsula in the Philippines.</p>
+        <p style="margin-top:1rem;">Founded by historians, educators, and culture advocates, this platform serves as a living repository of Bicolano identity — from pre-colonial epics to modern heritage conservation efforts.</p>
+        <p style="margin-top:1rem;">Our mission is to make Bicolano history accessible to students, researchers, tourists, and heritage enthusiasts worldwide — honoring the past to inspire the future.</p>
+        <div class="about-mission">
+          <div class="mission-item">
+            <span class="mission-icon">📚</span>
+            <div><strong>Research</strong><p>Academic-grade historical documentation</p></div>
+          </div>
+          <div class="mission-item">
+            <span class="mission-icon">🌐</span>
+            <div><strong>Accessibility</strong><p>Free, open access for all learners</p></div>
+          </div>
+          <div class="mission-item">
+            <span class="mission-icon">🤝</span>
+            <div><strong>Community</strong><p>Collaborative preservation effort</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal-right">
+        <div class="about-card-3d">
+          <div class="about-quote">
+            <div class="quote-mark">"</div>
+            <p>Ang nakaraan natin ay ang pundasyon ng ating kinabukasan.</p>
+            <span>Our past is the foundation of our future.</span>
+          </div>
+          <div class="about-stats-mini">
+            <div><strong>1593</strong><p>Oldest university</p></div>
+            <div><strong>1814</strong><p>Great Mayon eruption</p></div>
+            <div><strong>6M+</strong><p>Annual pilgrims</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section id="contact" class="contact-section section-pad">
+  <div class="container">
+    <div class="section-header reveal-up">
+      <p class="section-eyebrow">Get in Touch</p>
+      <h2 class="section-title">Contact Us</h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="contact-layout">
+      <div class="contact-info reveal-left">
+        <h3>Connect with the Archive</h3>
+        <p>Have historical photos, stories, or research to contribute? Reach out to the Bicol Heritage team.</p>
+        <div class="contact-items">
+          <div class="ci"><span>📧</span><div><strong>Email</strong><p>heritage@bicolarchive.ph</p></div></div>
+          <div class="ci"><span>📍</span><div><strong>Location</strong><p>Naga City, Camarines Sur, Philippines</p></div></div>
+          <div class="ci"><span>📱</span><div><strong>Social</strong><p>@BicolHeritage</p></div></div>
+        </div>
+      </div>
+      <div class="contact-form reveal-right">
+        <div class="form-group">
+          <input type="text" id="cName" placeholder="Your Name" />
+        </div>
+        <div class="form-group">
+          <input type="email" id="cEmail" placeholder="Email Address" />
+        </div>
+        <div class="form-group">
+          <select id="cSubject">
+            <option value="">Select Subject</option>
+            <option>Historical Research</option>
+            <option>Heritage Site Info</option>
+            <option>Media Contribution</option>
+            <option>General Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <textarea id="cMessage" placeholder="Your message..." rows="5"></textarea>
+        </div>
+        <button class="btn btn-primary" onclick="sendContact()">Send Message</button>
+        <div id="contactSuccess" class="contact-success" style="display:none">✅ Message sent! We'll respond within 2-3 days.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">⛰ BICOL HERITAGE</div>
+        <p>A digital archive preserving the history, culture, and heritage of the Bicol Peninsula, Philippines.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#history">History</a></li>
+          <li><a href="#heritage">Heritage Sites</a></li>
+          <li><a href="#culture">Culture</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-newsletter">
+        <h4>Stay Updated</h4>
+        <p>Subscribe to heritage stories and cultural insights.</p>
+        <div class="nl-form">
+          <input type="email" placeholder="your@email.com" id="nlEmail" />
+          <button onclick="subscribeNL()">→</button>
+        </div>
+        <div id="nlSuccess" style="display:none;color:var(--gold);margin-top:.5rem;font-size:.85rem">✓ Subscribed!</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Bicol Heritage Digital Archive. Made with ❤ for Bicolanos and history lovers everywhere.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
