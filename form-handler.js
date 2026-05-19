@@ -2,10 +2,7 @@
    BAKAS — BICOL HERITAGE  |  form-handler.js
    Handles all form submissions, saves to localStorage,
    and lets you download all submissions as a .txt file.
-   
-   HOW TO USE:
-   Add this line to the bottom of your index.html (before </body>):
-   <script src="form-handler.js"></script>
+
    ============================================================ */
 
 'use strict';
