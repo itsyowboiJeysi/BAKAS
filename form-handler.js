@@ -98,7 +98,6 @@ function clearSubmissions() {
 
 /* ============================================================
    FORM 1 — Contact Form
-   Overrides sendContact() from script.js
    ============================================================ */
 function sendContact() {
   const name    = document.getElementById('cName').value.trim();
@@ -136,7 +135,6 @@ function sendContact() {
 
 /* ============================================================
    FORM 2 — Newsletter Subscription
-   Overrides subscribeNL() from script.js
    ============================================================ */
 function subscribeNL() {
   const email = document.getElementById('nlEmail').value.trim();
@@ -158,7 +156,6 @@ function subscribeNL() {
 
 /* ============================================================
    FORM 3 — Blog Post (Create / Edit)
-   Overrides savePost() from script.js
    ============================================================ */
 function savePost() {
   const title    = document.getElementById('postTitle').value.trim();
@@ -217,7 +214,6 @@ function savePost() {
 
 /* ============================================================
    BLOG — Delete (audit log)
-   Overrides deletePost() from script.js
    ============================================================ */
 function deletePost(id) {
   if (!confirm('Delete this post?')) return;

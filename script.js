@@ -61,12 +61,19 @@ window.addEventListener('scroll', () => {
 function highlightNavLink() {
   const sections = document.querySelectorAll('section[id]');
   const scrollMid = window.scrollY + window.innerHeight / 2;
+  let activeSection = null;
+
   sections.forEach(sec => {
     const top = sec.offsetTop;
     const bot = top + sec.offsetHeight;
-    const link = document.querySelector(`.nav-link[href="#${sec.id}"]`);
-    if (link) link.classList.toggle('active', scrollMid >= top && scrollMid < bot);
+    if (scrollMid >= top && scrollMid < bot) activeSection = sec;
   });
+
+  document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+  if (activeSection) {
+    const link = document.querySelector(`.nav-link[href="#${activeSection.id}"]`);
+    if (link) link.classList.add('active');
+  }
 }
 
 /* ========== HAMBURGER / SIDEBAR ========== */
@@ -591,32 +598,7 @@ function deletePost(id) {
   saveBlogPosts(posts);
   renderBlog();
 }
-function savePost() {
-  const title = document.getElementById('postTitle').value.trim();
-  const desc  = document.getElementById('postDesc').value.trim();
-  if (!title || !desc) { alert('Title and description are required.'); return; }
-  const posts  = getBlogPosts();
-  const editId = document.getElementById('editPostId').value;
-  const newPost = {
-    id:       editId || Date.now().toString(),
-    title,
-    author:   document.getElementById('postAuthor').value.trim() || 'Anonymous',
-    category: document.getElementById('postCategory').value,
-    tags:     document.getElementById('postTags').value.split(',').map(t => t.trim()).filter(Boolean),
-    desc,
-    image:    uploadedImageUrl || document.getElementById('postImage').value.trim(),
-    date:     new Date().toISOString().split('T')[0],
-  };
-  if (editId) {
-    const idx = posts.findIndex(p => p.id === editId);
-    if (idx !== -1) posts[idx] = newPost; else posts.unshift(newPost);
-  } else {
-    posts.unshift(newPost);
-  }
-  saveBlogPosts(posts);
-  renderBlog();
-  closeBlogEditor();
-}
+
 
 /* Image Upload in Blog Editor */
 const uploadArea = document.getElementById('uploadArea');
@@ -762,25 +744,6 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') lbNext();
 });
 
-/* ========== CONTACT FORM ========== */
-function sendContact() {
-  const name    = document.getElementById('cName').value.trim();
-  const email   = document.getElementById('cEmail').value.trim();
-  const message = document.getElementById('cMessage').value.trim();
-  if (!name || !email || !message) { alert('Please fill in all fields.'); return; }
-  // Simulate send
-  document.getElementById('contactSuccess').style.display = 'block';
-  ['cName','cEmail','cMessage'].forEach(id => document.getElementById(id).value = '');
-  setTimeout(() => document.getElementById('contactSuccess').style.display = 'none', 5000);
-}
-
-/* ========== NEWSLETTER ========== */
-function subscribeNL() {
-  const email = document.getElementById('nlEmail').value.trim();
-  if (!email) return;
-  document.getElementById('nlSuccess').style.display = 'block';
-  document.getElementById('nlEmail').value = '';
-}
 
 /* ========== MOUSE PARALLAX on hero ========== */
 document.addEventListener('mousemove', e => {
